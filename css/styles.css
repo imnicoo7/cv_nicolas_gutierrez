@@ -203,8 +203,9 @@ body::before {
 }
 
 .marquee-track {
+  --marquee-gap: 48px;
   display: flex;
-  gap: 48px;
+  width: max-content; /* la pista mide lo que ocupan las palabras, no el contenedor: así -50% = una copia exacta */
   white-space: nowrap;
   animation: scroll 6s linear infinite;
   font-family: 'Fraunces', serif;
@@ -214,10 +215,17 @@ body::before {
   color: var(--ink);
 }
 
+.marquee-group {
+  display: flex;
+  gap: var(--marquee-gap);
+  padding-right: var(--marquee-gap); /* separación entre el final de una copia y el inicio de la otra */
+  flex-shrink: 0;
+}
+
 .marquee-track span {
   display: inline-flex;
   align-items: center;
-  gap: 48px;
+  gap: var(--marquee-gap);
 }
 
 .marquee-track span::after {
@@ -237,8 +245,7 @@ body::before {
    alarga la duración para que el ritmo visual sea similar al de escritorio. */
 @media (max-width: 640px) {
   .marquee { padding: 20px 0; margin-top: 32px; }
-  .marquee-track { font-size: 18px; gap: 28px; animation-duration: 2s; }
-  .marquee-track span { gap: 28px; }
+  .marquee-track { --marquee-gap: 28px; font-size: 18px; animation-duration: 1.5s; }
 }
 
 @media (prefers-reduced-motion: reduce) {
