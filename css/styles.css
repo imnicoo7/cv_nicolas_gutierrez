@@ -237,7 +237,7 @@ body::before {
    alarga la duración para que el ritmo visual sea similar al de escritorio. */
 @media (max-width: 640px) {
   .marquee { padding: 20px 0; margin-top: 32px; }
-  .marquee-track { font-size: 18px; gap: 28px; animation-duration: 16s; }
+  .marquee-track { font-size: 18px; gap: 28px; animation-duration: 3.5s; }
   .marquee-track span { gap: 28px; }
 }
 
