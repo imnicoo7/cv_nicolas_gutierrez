@@ -207,7 +207,7 @@ body::before {
   display: flex;
   width: max-content; /* la pista mide lo que ocupan las palabras, no el contenedor: así -50% = una copia exacta */
   white-space: nowrap;
-  animation: scroll 10s linear infinite;
+  animation: scroll 12s linear infinite;
   font-family: 'Fraunces', serif;
   font-style: italic;
   font-weight: 300;
@@ -245,7 +245,7 @@ body::before {
    alarga la duración para que el ritmo visual sea similar al de escritorio. */
 @media (max-width: 640px) {
   .marquee { padding: 20px 0; margin-top: 32px; }
-  .marquee-track { --marquee-gap: 28px; font-size: 18px; animation-duration: 9.6s; }
+  .marquee-track { --marquee-gap: 28px; font-size: 18px; animation-duration: 10s; }
 }
 
 @media (prefers-reduced-motion: reduce) {
